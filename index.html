@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work with add and sort products</title>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <input type="text" placeholder="Product" id="product">
+    <br>
+    <br>
+    <input type="number" placeholder="Price" id="price">
+    <br>
+    <br>
+    <input type="number" placeholder="Quantity" id="quantity">
+    <br>
+    <button onclick="addProduct()">Add</button>
+    <br>
+    <br>
+    Show?
+    <input type="radio" 
+           name="show" value="true">
+    Yes
+    <input type="radio" 
+           name="show" value="false">
+    No     
+    <br>
+    <br>
+    <br>
+    Sort by:
+    <select onchange="sortProducts()" name="sorting" id="sort">
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+        <option value="quantity">Quantity</option>
+    </select>
+    <select onchange="sortProductsPrice()" name="sortingBigLow" id="sortBigLow">
+        <option value="bigger">Bigger</option>
+        <option value="lower">Lower</option>
+    </select>
+    <input type="text" placeholder="Search" id="search">
+    <button onclick="searchProduct()">Search</button>
+    <ul id="list"></ul>
+</body>
+</html>
